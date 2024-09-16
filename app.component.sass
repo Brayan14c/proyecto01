@@ -1,0 +1,257 @@
+// Estilos para la Vista de Login
+.login-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100vh
+  background: linear-gradient(135deg, #81a6e9, #002c69)
+
+  h1
+    text-align: center
+    margin-bottom: 1rem
+    font-size: 2.5rem
+    font-weight: 600
+    color: #000
+    text-shadow: -12px 7px 0px rgba(0, 0, 0, 0.1)
+
+  .login-form
+    width: 90%
+    max-width: 400px
+    padding: 2rem
+    background: white
+    border-radius: 12px
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1)
+    border: 1px solid #e0e0e0
+
+    .form-control
+      width: 100%
+      padding: 0.875rem
+      margin: 10px 0
+      border: 1px solid #ccc
+      border-radius: 4px
+      font-size: 1rem
+      box-sizing: border-box
+
+    .form-group
+      margin-bottom: 1.5rem
+
+    label
+      display: block
+      margin-bottom: 0.75rem
+      font-weight: 500
+      color: #555
+      font-size: large
+
+    .input-group
+      display: flex
+      flex-direction: column
+
+    .input-group input
+      padding: 0.875rem
+      border: 1px solid #ddd
+      border-radius: 8px
+      font-size: 1rem
+      transition: border-color 0.3s
+
+    .input-group input:focus
+      border-color: #007bff
+      outline: none
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3)
+
+    .error-message
+      color: #d9534f
+      font-size: 0.875rem
+      margin-top: 0.25rem
+      font-style: italic
+
+    .submit-button
+      width: 100%
+      padding: 0.875rem
+      background-color: #007bff
+      border: none
+      border-radius: 8px
+      color: white
+      font-size: 1.125rem
+      font-weight: 600
+      cursor: pointer
+      transition: background-color 0.3s, transform 0.2s
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+    .submit-button:hover
+      background-color: #0056b3
+      transform: scale(1.02)
+
+// Estilos para la Vista Principal
+.home-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding: 2rem
+  background: #f4f4f4
+  min-height: 100vh
+  font-family: 'Arial', sans-serif
+
+  .header
+    margin-bottom: 2rem
+    text-align: center
+    background: linear-gradient(90deg, #2c3e50, #2980b9)
+    color: white
+    padding: 2rem 4rem
+    border-radius: 10px
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+    line-height: 1.5
+
+    h1
+      font-size: 3rem
+      font-weight: 700
+      margin-bottom: 0.5rem
+      text-transform: uppercase
+
+    p
+      font-size: 1rem
+      line-height: 1.6
+      margin: 0
+      opacity: 0.8
+
+  // Estilos para la Sección Sobre Nosotros
+  .about
+    margin-bottom: 3rem
+    text-align: center
+
+    h2
+      font-size: 2.5rem
+      color: #333
+      margin-bottom: 1rem
+
+    p
+      font-size: 1.125rem
+      color: #555
+      max-width: 800px
+      margin: 0 auto
+
+    .company-image
+      width: 100%
+      max-width: 700px
+      border-radius: 8px
+      margin-top: 1rem
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+  // Estilos para la Sección de Servicios
+  .services
+    text-align: center
+    margin-bottom: 3rem
+
+    h2
+      font-size: 2.5rem
+      color: #333
+      margin-bottom: 1rem
+
+    .services-container
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      gap: 2rem
+
+    .service
+      display: flex
+      flex-direction: column
+      align-items: center
+      max-width: 320px
+      padding: 1rem
+      border: 1px solid #ddd
+      border-radius: 8px
+      background: #fff
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+      position: relative
+
+      .service-image
+        width: 100%
+        max-width: 300px
+        height: 180px
+        object-fit: cover
+        border-radius: 8px
+
+      h3
+        font-size: 1.5rem
+        color: #007bff
+        margin-bottom: 0.5rem
+
+      p
+        font-size: 1.125rem
+        color: #555
+
+      .learn-more
+        margin-top: 0.5rem
+        font-size: 1rem
+        color: #007bff
+        text-decoration: none
+        border-bottom: 1px solid #007bff
+        transition: color 0.3s
+
+      .learn-more:hover
+        color: #0056b3
+        border-bottom-color: #0056b3
+
+  // Estilos para la Sección de Llamada a la Acción (CTA)
+  .cta
+    text-align: center
+    padding: 2rem
+    background: #032f5f
+    color: white
+    border-radius: 8px
+    margin-top: 2rem
+
+    h2
+      font-size: 2rem
+      margin-bottom: 1rem
+
+    p
+      font-size: 1.125rem
+      margin-bottom: 1rem
+
+    .cta-button
+      padding: 0.875rem 1.5rem
+      background-color: #fff
+      color: #007bff
+      border: none
+      border-radius: 8px
+      font-size: 1.125rem
+      font-weight: 600
+      text-decoration: none
+      cursor: pointer
+      transition: background-color 0.3s, transform 0.2s
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+    .cta-button:hover
+      background-color: #e0e0e0
+      transform: scale(1.05)
+
+.abilities
+  margin-top: 25px
+
+  table
+    width: 100%
+    border-collapse: collapse
+    margin-top: 10px
+    font-size: 16px
+
+    thead
+      background-color: #f4f4f4
+
+    th, td
+      border: 1.5rem solid #ddd
+      padding: 8px
+      text-align: left
+
+    th
+      background-color: #f4f4f4
+
+    tr:nth-child(even)
+      background-color: #f9f9f9
+
+  p
+    margin-top: 10px
+    font-style: italic
+

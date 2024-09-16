@@ -1,0 +1,86 @@
+<!-- Contenedor de login -->
+<div class="login-container" *ngIf="!isAuthenticated">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <h1>Acceso</h1>
+    <div class="form-group">
+      <label for="username">Nombre de usuario</label>
+      <input id="username" formControlName="username" type="text" class="form-control" placeholder="Ingrese su nombre de usuario">
+      <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="error-message">
+        El nombre de usuario es obligatorio
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input id="password" formControlName="password" type="password" class="form-control" placeholder="Ingrese su contraseña">
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error-message">
+        La contraseña es obligatoria
+      </div>
+    </div>
+    
+    <button type="submit" [disabled]="loginForm.invalid" class="submit-button">Iniciar sesión</button>
+  </form>
+</div>
+
+<!-- Contenedor de la página principal -->
+<div class="home-container" *ngIf="isAuthenticated">
+  <header class="header">
+    <h1>Bienvenido a Mi Proyecto</h1>
+    <p>Descubre más sobre mí.</p>
+  </header>
+
+  <section class="about">
+    <h2>Sobre Mí</h2>
+    <p>
+      A lo largo de mi carrera estudiantil, he implementado muchas cosas. Gracias a lo que he aprendido, ahora estoy aplicando ese conocimiento en mi nuevo espacio de trabajo.
+    </p>
+    <img src="../assets/img/IMG_01.jpg" alt="Edificio de la empresa" class="company-image">
+  </section>
+
+  <section class="services">
+    <h2>Lo que Más Me Gusta</h2>
+    <div class="services-container">
+      <div class="service">
+        <img src="../assets/img/IMG_01.jpg" alt="Servicio 1" class="service-image">
+        <h3>Música</h3>
+        <p>Me gusta una variedad de música, pero lo que más me interesa es el dancehall. Es mi manera favorita de relajarme.</p>
+        <a href="#" class="learn-more">Leer más</a>
+      </div>
+      <div class="service">
+        <img src="../assets/img/IMG_01.jpg" alt="Servicio 2" class="service-image">
+        <h3>Actividad Física</h3>
+        <p>Hacer ejercicio en el gimnasio es fundamental para mí. Me ayuda a desconectar y mantenerme en forma.</p>
+        <a href="#" class="learn-more">Leer más</a>
+      </div>
+      <div class="service">
+        <img src="../assets/img/IMG_02.jpg" alt="Servicio 3" class="service-image">
+        <h3>Redes Sociales</h3>
+        <p>Uso WhatsApp diariamente para comunicarme con amigos y familia. Es esencial para mantenerme conectado.</p>
+        <a href="#" class="learn-more">Leer más</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Contactar</h2>
+    <p>Si quieres saber más sobre mis proyectos o colaborar, no dudes en ponerte en contacto.</p>
+    
+  </section>
+
+  <section class="abilities">
+    <h2>Habilidades de Pokémon</h2>
+    <table *ngIf="abilities.length > 0">
+      <thead>
+        <tr>
+          <th>Nombre de cada una.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ability of abilities">
+          <td>{{ ability }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="abilities.length === 0">No hay habilidades para mostrar.</p>
+  </section>
+</div>
